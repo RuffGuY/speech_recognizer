@@ -1,10 +1,10 @@
 import speech_recognition
 from gtts import gTTS
 import os
-print("1. learn A")
-print("2. learn B")
-print("3, learn c")
-print("enter your choice")
+print("1. Press 1 to learn A")
+print("2. Press 2 to learn B")
+print("3, Press 3 to learn C")
+print("Enter your choice")
 
 x=int(input())
 if x==1:
@@ -12,7 +12,7 @@ if x==1:
     from gtts import gTTS
     import os
     UserVoiceRecognizer = speech_recognition.Recognizer()
-    print("speak something:")
+    print("Speak something:")
     while(1):
         try:
 
@@ -32,14 +32,14 @@ if x==1:
                 
                     mytxt = 'perfect!,move on to the next module'
 
-    # Language we want to use
+    # Language we want to use in this case it is english
                     language1 = 'en'
 
                     myobj1 = gTTS(text=mytxt, lang=language1, slow=False)
 
                     myobj1.save("output1.mp3")
 
-    # Play the converted file
+    # Play the converted file which is saved
                     os.system("start output1.mp3")
                 
                 elif first == 0:
@@ -49,7 +49,7 @@ if x==1:
                 else :
                     mytext = 'wrong word'
 
-                    # Language we want to use
+                    # Language we want to use which is english in this case
                 language = 'en'
 
                 myobj = gTTS(text=mytext, lang=language, slow=False)
@@ -88,7 +88,7 @@ if (x ==2):
                 
                     mytxt = 'perfect!,move on to the next module'
 
-    # Language we want to use
+    # Language we want to use which is english in this case
                     language1 = 'en'
 
                     myobj1 = gTTS(text=mytxt, lang=language1, slow=False)
@@ -144,7 +144,7 @@ if (x ==3):
                 
                     mytxt = 'perfect!,move on to the next module'
 
-    # Language we want to use
+    # Language we want to use which is english in this case
                     language1 = 'en'
 
                     myobj1 = gTTS(text=mytxt, lang=language1, slow=False)
@@ -172,9 +172,9 @@ if (x ==3):
                 os.system("start output.mp3")
                     
         except KeyboardInterrupt:
-            print('A KeyboardInterrupt encountered; Terminating the Program !!!')
+            print('A KeyboardInterrupt encountered : Terminating the Program !!!')
             exit(0)
 
         except speech_recognition.UnknownValueError:
-            print("No User Voice d+etected OR unintelligible noises detected OR the recognized audio cannot be matched to text !!!")
+            print("No User Voice detected OR unintelligible noises detected OR the recognized audio cannot be matched to text !!!")
 
